@@ -265,7 +265,7 @@ if __name__ == "__main__":
     fuente = QFont()
     fuente.setPointSize(10)
     aplicacion.setFont(fuente)
-
+n
     ventana = tableWidget()
     ventana.show()
 
