@@ -22,15 +22,16 @@ import pandas as pd
 from PyQt5.QtWidgets import QApplication, QTableView
 from PyQt5.QtCore import QAbstractTableModel, Qt
 
-df = pd.DataFrame({'Estación': ['Vicentelo', 'Menacho', 'Planta 2', 'Planta 2'],
+df = pd.DataFrame({'Estación': ['Estacion 01', 'Estación 02', 'Estación 03', 'Estación 04'],
                   'Dirección': ['Salida', 'Salida', 'Salida', 'Salida'],
-                  'Fecha y hora': ['25/02/2020', '26/02/2002', '27/02/2002', '03/03/2020'],
+                  'Fecha y hora': ['25/02/2004', '26/02/2002', '27/02/2002', '03/03/2004'],
                    'Caudal (m3/s)': [10.4, 12.6, 16.9, 3.13]})
 class pandasModel(QAbstractTableModel):
     def __init__(self, data):
         QAbstractTableModel.__init__(self)
         self.__data = data
-        #self.setWindowsIco(QIcon("ADCP.png"))
+        #self.setWindowsIcon(QIcon("ADCP.png"))
+        
 
     def rowCount(self, parent=None):
         return self.__data.shape[0]

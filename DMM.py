@@ -36,6 +36,7 @@ class tableWidget(QDialog):
         self.setWindowIcon(QIcon("ADCP.png"))
         self.setWindowFlags(Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint | 
                             Qt.MSWindowsFixedSizeDialogHint)
+
         self.setFixedSize(850, 400)
 
         self.initUI()
@@ -161,10 +162,10 @@ class tableWidget(QDialog):
                             "\nHiciste click en la celda: {}".format(celda.text()), QMessageBox.Ok)
 
     def datosTabla(self):
-        datos = [("1", "Vicentelo", "Estático", "20/02/2020", "1era"),
-                 ("2", "Vicentelo", "Dinámico", "20/02/2020", "----"),
-                 ("3", "Menacho", "Estático", "21/02/2020", "1era"),
-                 ("4", "Menacho", "Dinámico", "21/02/2020", "1era")]
+        datos = [("1", "Estación 01", "Estático", "20/02/2020", "1era"),
+                 ("2", "Estación 02", "Dinámico", "20/02/2020", "----"),
+                 ("3", "Estación 03", "Estático", "21/02/2020", "1era"),
+                 ("4", "Estación 04", "Dinámico", "21/02/2020", "1era")]
 
 
 
@@ -265,7 +266,7 @@ if __name__ == "__main__":
     fuente = QFont()
     fuente.setPointSize(10)
     aplicacion.setFont(fuente)
-n
+
     ventana = tableWidget()
     ventana.show()
 

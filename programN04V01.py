@@ -8,8 +8,8 @@ class widget(QtWidgets.QWidget):
         vLayout = QtWidgets.QVBoxLayout(self)
         hLayout = QtWidgets.QHBoxLayout()
         self.pathLe = QtWidgets.QLineEdit(self)
-        hLayout.addWidget(self.pathLE)
-        self.loadBtn = QtwIDGETS.QPushButton("Select File", self)
+        hLayout.addWidget(self.pathLe)
+        self.loadBtn = QtWidgets.QPushButton("Seleccionar Archivo", self)
         hLayout.addWidget(self.loadBtn)
         vLayout.addLayout(hLayout)
         self.pandasTv = QtWidgets.QTableView(self)
@@ -18,9 +18,11 @@ class widget(QtWidgets.QWidget):
         self.pandasTv.setSortingEnabled(True)
 
     def loadFile(self):
-        fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Open File", "", "CSV Files (*.csv)");
-        self.pathLE.setText(fileName)
-        df = pd.read_csv(fileName)
+        #fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Abrir archivo", "", "Archivos CSV (*.csv)");
+        fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Abrir archivo", "", "Archivos Excel (*.xlsx)");
+        self.pathLe.setText(fileName)
+        #df = pd.read_csv(fileName)
+        df = pd.read_excel(fileName)
         model = PandasModel(df)
         self.pandasTv.setModel(model)
 
