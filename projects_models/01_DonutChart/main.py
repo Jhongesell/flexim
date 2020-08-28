@@ -22,7 +22,7 @@ class Window(QMainWindow):
     def crear_grafico(self):
  
         series = QPieSeries()
-        series.setHoleSize(0.35)
+        series.setHoleSize(0.3)
         series.append("Entrada Planta 2 - Sector 1, 7.0%", 7)
         slice = QPieSlice()
         slice = series.append("Entrada Planta 2 - Sector 2, 30.0%", 30)
@@ -42,9 +42,15 @@ class Window(QMainWindow):
         chart.setAnimationOptions(QChart.SeriesAnimations)
         chart.setTitle("Estaciones de Medición")
         #chart.setTheme(QChart.ChartThemeBlueCerulean)
+        #chart.setTheme(QChart.ChartThemeBlueIcy)
+        chart.setTheme(QChart.ChartThemeBlueNcs)
+        #chart.setTheme(QChart.ChartThemeHighContrast)
+        #chart.setTheme(QChart.ChartThemeQt)
         #chart.setTheme(QChart.ChartThemeBrownSand)
         #chart.setTheme(QChart.ChartThemeLight)
-        chart.setTheme(QChart.ChartThemeDark)
+        #chart.setTheme(QChart.ChartThemeDark)
+        
+        
  
  
  
