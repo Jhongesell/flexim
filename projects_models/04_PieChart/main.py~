@@ -1,0 +1,12 @@
+from PyQt5.QtWidgets import QApplication, QMainWindow
+import sys
+from PyQt5.QtChart import QChart, QChartView, QPieSeries, QPieSlice
+from PyQt5.QtGui import QPainter, QPen
+from PyQt5.QtCore import Qt
+
+class Window(QMainWindow):
+    pass
+
+App = QApplication(sys.argv)
+window = Window()
+sys.exit(App.exec_())

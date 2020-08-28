@@ -1,0 +1,56 @@
+from PyQt5.QtWidgets import QApplication, QMainWindow
+import sys
+from PyQt5.QtChart import QChart, QChartView, QLineSeries
+from PyQt5.QtCore import QPointF
+from PyQt5.QtGui import QPainter
+from PyQt5.QtCore import Qt
+ 
+ 
+class Window(QMainWindow):
+    def __init__(self):
+        super().__init__()
+ 
+        self.setWindowTitle("Resultados Gráficos")
+        self.setGeometry(100,100, 680,500)
+ 
+        self.show()
+ 
+        self.create_linechart()
+ 
+ 
+ 
+    def create_linechart(self):
+ 
+        series = QLineSeries(self)
+        series.append(1965,164)
+        series.append(1966, 160)
+        series.append(1989, 157)
+        series.append(1991, 174)
+        series.append(1993, 153)
+ 
+        series << QPointF(2002, 173) << QPointF(2009, 20) << QPointF(2013, 50) << QPointF(2018, 25) << QPointF(2019, 20)
+ 
+ 
+        chart =  QChart()
+ 
+        chart.addSeries(series)
+        chart.createDefaultAxes()
+        chart.setAnimationOptions(QChart.SeriesAnimations)
+        chart.setTitle("Número de Mediciones VS. Caudales")
+ 
+        chart.legend().setVisible(True)
+        chart.legend().setAlignment(Qt.AlignBottom)
+ 
+ 
+        chartview = QChartView(chart)
+        chartview.setRenderHint(QPainter.Antialiasing)
+ 
+        self.setCentralWidget(chartview)
+ 
+ 
+ 
+ 
+ 
+App = QApplication(sys.argv)
+window = Window()
+sys.exit(App.exec_())
