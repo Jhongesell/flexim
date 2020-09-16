@@ -1,0 +1,14 @@
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter
+from reportlab.lib.units import mm
+
+def coord(x, y, height, unit=1):
+    x, y = x * unit, height - y * unit
+    return x, y
+
+c = canvas.Canvas('hola.pdf', pagesize=letter)
+width, heiht = letter
+
+c.drawString(*coord(15, 20, height, mm), text='Bienvenido a Reportlab!')
+c.showPage()
+c.save()
