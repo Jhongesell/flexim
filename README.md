@@ -7,4 +7,10 @@ Las tecnologías que se utilizan para el proyecto son:
 
 El proyecto se viene realizando para el modelo de equipo Fluxus-F601 de la marca Flexim.
 
-![Imagen del equipo](/src_for_readme/flexim.jpg)
+![Imagen del caudalimetro](/src_for_readme/flexim.jpg)
+
+En el equipo de proyecto se encuentran participando intengrantes de HYO, con los cuales se hace la extracción de los datos en campo, gracias a estas mediciones se puede procesar y hacer estudios de comparación.
+
+![Imagen del la extracción de la data](/src_for_readme/image01.jpeg)
+
+De tener alguna inquietud no duden en ponerse en contacto.
