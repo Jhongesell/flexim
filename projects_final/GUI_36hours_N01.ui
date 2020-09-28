@@ -69,14 +69,14 @@
          <item>
           <widget class="QLabel" name="label_9">
            <property name="text">
-            <string>Relación 01</string>
+            <string>La relación de caudales es del:</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_10">
            <property name="text">
-            <string>Porcentaje de variación:</string>
+            <string>Y su complemento es de:</string>
            </property>
           </widget>
          </item>
