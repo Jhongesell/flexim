@@ -5,8 +5,8 @@ def coord(x, y, unit=1):
     x, y = x * unit, y * unit
     return x, y
 
-c = canvas.Canvas('hola.pdf', bottomup=0)
+c = canvas.Canvas('Juan-test.pdf', bottomup=0)
 
-c.drawString(*coord(15, 20, mm), text='Bienvenidos nuevamente a Reportlab!')
+c.drawString(*coord(15, 20, mm), text='hola estamos presentando Glatc!')
 c.showPage()
 c.save()

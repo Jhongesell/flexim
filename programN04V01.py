@@ -19,7 +19,7 @@ class widget(QtWidgets.QWidget):
 
     def loadFile(self):
         #fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Abrir archivo", "", "Archivos CSV (*.csv)");
-        fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Abrir archivo", "", "Archivos Excel (*.xlsx)");
+        fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Abrir archivo", "", "Archivos Excel (*.xls)");
         self.pathLe.setText(fileName)
         #df = pd.read_csv(fileName)
         df = pd.read_excel(fileName)

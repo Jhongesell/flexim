@@ -33,7 +33,7 @@ class tableWidget(QDialog):
         super(tableWidget, self).__init__(parent)
 
         self.setWindowTitle("Gestor de Medición de Caudales")
-        self.setWindowIcon(QIcon("ADCP.png"))
+        self.setWindowIcon(QIcon("logo_main_n01.png"))
         self.setWindowFlags(Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint | 
                             Qt.MSWindowsFixedSizeDialogHint)
 
