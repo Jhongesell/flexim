@@ -2,7 +2,7 @@
 # Widget para la calibración de caudal
 import sys
 from PyQt5.QtWidgets import QDialog, QApplication
-from GUI_calibracion_N01 import *
+from GUI_calibracion_N02 import *
 class MyForm(QDialog):
     def __init__(self):
         super().__init__()
